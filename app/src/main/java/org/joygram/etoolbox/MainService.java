@@ -27,7 +27,8 @@ public class MainService extends Service implements OnTouchListener, OnClickList
 
     private WindowManager m_wm;
     private Button m_overlay_button;
-
+    LinearLayout m_main_view;
+    WindowManager.LayoutParams m_main_view_param;
     private float offsetX;
     private float offsetY;
     private int originalXPos;
@@ -50,10 +51,10 @@ public class MainService extends Service implements OnTouchListener, OnClickList
 
         // create button
         m_overlay_button = new Button(this);
-        m_overlay_button.setText("REFRESH");
+        m_overlay_button.setText("  R  ");
         m_overlay_button.setOnTouchListener(this);
-        m_overlay_button.setAlpha(0.5f);
-        m_overlay_button.setBackgroundColor(0x55fe4444);
+        m_overlay_button.setAlpha(0.3f);
+        m_overlay_button.setBackgroundColor(0x55ffffff);
         m_overlay_button.setOnClickListener(this);
         WindowManager.LayoutParams params = new WindowManager.LayoutParams(WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.TYPE_SYSTEM_ALERT, WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE | WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL, PixelFormat.TRANSLUCENT);
         params.gravity = Gravity.LEFT | Gravity.TOP;
@@ -70,8 +71,6 @@ public class MainService extends Service implements OnTouchListener, OnClickList
         topLeftParams.width = 0;
         topLeftParams.height = 0;
         m_wm.addView(m_top_left_view, topLeftParams);
-        Log.i("org.joygram.etoolbox", "add main view");
-
     }
 
     @Override
@@ -80,8 +79,11 @@ public class MainService extends Service implements OnTouchListener, OnClickList
         if (m_overlay_button != null) {
             m_wm.removeView(m_overlay_button);
             m_wm.removeView(m_top_left_view);
+            //m_wm.removeView(m_main_view);
+
             m_overlay_button = null;
             m_top_left_view = null;
+            m_main_view = null;
         }
     }
 
@@ -123,7 +125,9 @@ public class MainService extends Service implements OnTouchListener, OnClickList
             int newX = (int) (offsetX + x);
             int newY = (int) (offsetY + y);
 
-            if (Math.abs(newX - originalXPos) < 1 && Math.abs(newY - originalYPos) < 1 && !moving) {
+            if (Math.abs(newX - originalXPos) < 15 && Math.abs(newY - originalYPos) < 15 && !moving) {
+                System.out.println("not moving, skip");
+
                 return false;
             }
 
@@ -132,6 +136,7 @@ public class MainService extends Service implements OnTouchListener, OnClickList
 
             m_wm.updateViewLayout(m_overlay_button, params);
             moving = true;
+
         } else if (event.getAction() == MotionEvent.ACTION_UP) {
             if (moving) {
                 return true;
@@ -142,9 +147,28 @@ public class MainService extends Service implements OnTouchListener, OnClickList
     }
 
     @Override
+    public int onStartCommand(Intent intent, int flags, int startId) {
+        Log.i("", "start command");
+        callRefresh();
+        return super.onStartCommand(intent, flags, startId);
+
+    }
+
+    @Override
     public void onClick(View v) {
         Log.i("", "onclicked");
-        EpdController.invalidate(m_main_view, UpdateMode.GC);
+        callRefresh();
+    }
+
+    private void callRefresh()
+    {
+
+        Intent intent = new Intent(this, FullscreenActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION | Intent.FLAG_ACTIVITY_NEW_TASK);
+        for (int i = 0; i < 20; ++i)
+        {
+            startActivity(intent);
+        }
     }
 
 }
