@@ -2,9 +2,9 @@
 
     <SwitchPreference
         android:defaultValue="true"
-        android:key="example_switch"
-        android:summary="@string/pref_description_social_recommendations"
-        android:title="@string/pref_title_social_recommendations" />
+        android:key="button_show_switch"
+        android:summary="@string/pref_button_show_summary"
+        android:title="@string/pref_button_show" />
 
     <!-- NOTE: EditTextPreference accepts EditText attributes. -->
     <!-- NOTE: EditTextPreference's summary should be set to its value by the activity code. -->

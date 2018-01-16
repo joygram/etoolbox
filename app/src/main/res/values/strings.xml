@@ -6,7 +6,8 @@
 
     <!-- Example General settings -->
     <string name="pref_header_general">General</string>
-
+<string name="pref_button_show">단추 보이기</string>
+    <string name="pref_button_show_summary">리프레시 단추를 보여줍니다.</string>
     <string name="pref_title_social_recommendations">Enable social recommendations</string>
     <string name="pref_description_social_recommendations">Recommendations for people to contact
         based on your message history
