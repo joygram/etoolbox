@@ -5,6 +5,8 @@ android {
         joyfresh {
             keyAlias 'joyfresh'
             storeFile file('C:/Users/joygram/joygram_key.jks')
+            keyPassword 'ho0910'
+            storePassword 'hanl0910'
         }
     }
     compileSdkVersion 26

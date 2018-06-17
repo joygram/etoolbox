@@ -1,14 +1,13 @@
 package org.joygram.etoolbox;
 
+import android.app.ActivityManager;
 import android.app.Service;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.PixelFormat;
 import android.os.IBinder;
-import android.support.annotation.NonNull;
-import android.support.v4.content.LocalBroadcastManager;
 import android.view.Gravity;
-import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -16,14 +15,47 @@ import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import android.util.Log;
 
-import com.onyx.android.sdk.api.device.epd.EpdController;
-import com.onyx.android.sdk.api.device.epd.UpdateMode;
+import java.util.List;
+
+
+
+class TimerThread implements Runnable{
+    MainService m_main_service ;
+
+    public TimerThread(MainService main_service) {
+        m_main_service = main_service;
+    }
+    boolean m_running = false;
+
+    public void run()
+    {
+        m_running = true;
+        while(true == m_running)
+        {
+            MainPreferenceManager.getPreferencesData();
+            int sleep_time = MainPreferenceManager.m_timeout * 1000;
+
+            try {
+                Thread.sleep(sleep_time);
+                if (null != m_main_service) {
+                    if (true == MainPreferenceManager.m_use_timer) {
+
+                        if (false == m_main_service.isSkipPackage())
+                        {
+                            m_main_service.callRefresh();
+                        }
+                    }
+                }
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
 
 
 public class MainService extends Service implements OnTouchListener, OnClickListener {
@@ -56,6 +88,9 @@ public class MainService extends Service implements OnTouchListener, OnClickList
     public void onCreate() {
 
         Log.i("org.joygram.etoolbox", "onCreate");
+
+        MainPreferenceManager.m_prefs = getApplicationContext().getSharedPreferences("org.joygram.etoolbox_preferences", Context.MODE_PRIVATE);
+        MainPreferenceManager.getPreferencesData();
 
         super.onCreate();
         m_wm = (WindowManager) getSystemService(Context.WINDOW_SERVICE);
@@ -111,6 +146,8 @@ public class MainService extends Service implements OnTouchListener, OnClickList
                 PixelFormat.TRANSLUCENT);
         m_wm.addView(m_touch_view, touch_params);
 
+        Thread timer = new Thread(new TimerThread(this));
+        timer.start();
     }
 
     @Override
@@ -156,9 +193,6 @@ public class MainService extends Service implements OnTouchListener, OnClickList
             int[] topLeftLocationOnScreen = new int[2];
             m_top_left_view.getLocationOnScreen(topLeftLocationOnScreen);
 
-            //System.out.println("topLeftY="+topLeftLocationOnScreen[1]);
-            //System.out.println("originalY="+originalYPos);
-
             float x = event.getRawX();
             float y = event.getRawY();
 
@@ -184,12 +218,30 @@ public class MainService extends Service implements OnTouchListener, OnClickList
             if (moving) {
                 return true;
             }
+
         } else {
+
+            if (isSkipPackage())
+            {
+                return false;
+            }
+
             m_touch_count++;
-            if (m_touch_count > 1) {
-                callRefresh();
+            if (m_touch_count >= MainPreferenceManager.m_touch_count) {
+               callRefresh();
             }
             //Log.i(m_logger_name, String.format("onTouch %d", m_touch_count++ ));
+        }
+
+        return false;
+    }
+
+    public boolean isSkipPackage()
+    {
+        if( isForegroundPackage("org.joygram.etoolbox")
+                || isForegroundPackage("launcher"))
+        {
+            return true;
         }
 
         return false;
@@ -199,8 +251,9 @@ public class MainService extends Service implements OnTouchListener, OnClickList
     public int onStartCommand(Intent intent, int flags, int startId) {
         Log.i(m_logger_name, "--- start command ---");
         callRefresh();
+
+
         return super.onStartCommand(intent, flags, startId);
-        //return Service.START_STICKY;
     }
 
     @Override
@@ -209,23 +262,34 @@ public class MainService extends Service implements OnTouchListener, OnClickList
         callRefresh();
     }
 
-    private void callRefresh()
+    String getForegroundPackageName()
     {
-        Log.i(m_logger_name, "call refresh");
+        ActivityManager manager = (ActivityManager) getSystemService(ACTIVITY_SERVICE);
+        List<ActivityManager.RunningAppProcessInfo> infos = manager.getRunningAppProcesses();
+        ActivityManager.RunningAppProcessInfo info = infos.get(0);
+
+        Log.i(m_logger_name, String.format("package name:%s", info.processName));
+
+        return info.processName;
+    }
+
+    boolean isForegroundPackage(String package_name) {
+
+        return getForegroundPackageName().contains(package_name);
+    }
+
+    public void callRefresh()
+    {
+        Log.i(m_logger_name, String.format("call refresh"));
+
 
         Intent intent = new Intent(this, FullscreenActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION
-//                | Intent.FLAG_ACTIVITY_NO_HISTORY
                 | Intent.FLAG_ACTIVITY_NEW_TASK);
 
-        //for (int i = 0; i < 5; ++i)
+        for (int i = 0; i < 15; ++i)
         {
             startActivity(intent);
-
- //           LocalBroadcastManager local_broadcast_manager = LocalBroadcastManager.getInstance(this);
- //           local_broadcast_manager.sendBroadcast(new Intent("org.jogyram.etoolbox.action.close"));
-
-
         }
         m_touch_count = 0;
     }
