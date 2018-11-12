@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.graphics.PixelFormat;
 import android.os.IBinder;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -21,12 +22,48 @@ import android.util.Log;
 import com.onyx.android.sdk.api.device.epd.EpdController;
 import com.onyx.android.sdk.api.device.epd.UpdateMode;
 
+class MyLinearLayout extends LinearLayout
+{
+
+    private MyKeyEventCallbackListener myKeyEventCallbackListener;
+
+    public MyLinearLayout(Context context)
+    {
+        super(context);
+    }
+
+    public interface MyKeyEventCallbackListener {
+        void onKeyEvent(KeyEvent event);
+    }
+
+    public void setMyKeyEventCallbackListener(MyKeyEventCallbackListener callback) {
+        this.myKeyEventCallbackListener = callback;
+    }
+
+    @Override
+    public boolean dispatchKeyEvent(KeyEvent event) {
+        if (event.getAction() == KeyEvent.ACTION_DOWN ) {
+            switch (event.getKeyCode()) {
+                case KeyEvent.KEYCODE_BACK:
+                    if(myKeyEventCallbackListener != null)
+                        myKeyEventCallbackListener.onKeyEvent(event);
+                    break;
+                default:
+            }
+        }
+
+        return super.dispatchKeyEvent(event);
+    }
+
+}
+
 public class MainService extends Service implements OnTouchListener, OnClickListener {
     public MainService() {
     }
 
     private WindowManager m_wm;
     private Button m_overlay_button;
+    private MyLinearLayout m_main_view;
 
     private float offsetX;
     private float offsetY;
@@ -34,6 +71,8 @@ public class MainService extends Service implements OnTouchListener, OnClickList
     private int originalYPos;
     private boolean moving;
     private View m_top_left_view;
+
+    private int m_trigger_count = 0;
 
     @Override
     public IBinder onBind(Intent intent) {
@@ -55,13 +94,15 @@ public class MainService extends Service implements OnTouchListener, OnClickList
         m_overlay_button.setAlpha(0.5f);
         m_overlay_button.setBackgroundColor(0x55fe4444);
         m_overlay_button.setOnClickListener(this);
-        WindowManager.LayoutParams params = new WindowManager.LayoutParams(WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.TYPE_SYSTEM_ALERT, WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE | WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL, PixelFormat.TRANSLUCENT);
+
+        WindowManager.LayoutParams params = new WindowManager.LayoutParams(WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.TYPE_SYSTEM_ALERT,
+            WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE | WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL, PixelFormat.TRANSLUCENT);
         params.gravity = Gravity.LEFT | Gravity.TOP;
         params.x = 0;
         params.y = 0;
         m_wm.addView(m_overlay_button, params);
 
-        // create overlay view
+
         m_top_left_view = new View(this);
         WindowManager.LayoutParams topLeftParams = new WindowManager.LayoutParams(WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.TYPE_SYSTEM_ALERT, WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE | WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL, PixelFormat.TRANSLUCENT);
         topLeftParams.gravity = Gravity.LEFT | Gravity.TOP;
@@ -70,6 +111,26 @@ public class MainService extends Service implements OnTouchListener, OnClickList
         topLeftParams.width = 0;
         topLeftParams.height = 0;
         m_wm.addView(m_top_left_view, topLeftParams);
+
+        //refresh view
+        m_main_view = new MyLinearLayout(this);
+        m_main_view.setOnClickListener(this);
+
+        m_main_view.setMyKeyEventCallbackListener(new MyLinearLayout.MyKeyEventCallbackListener() {
+            @Override
+            public void onKeyEvent(KeyEvent event) {
+                Log.i("org.joygram.etoolbox", String.format("{0}", event.toString()));
+            }
+        });
+
+
+        WindowManager.LayoutParams full_params = new WindowManager.LayoutParams(
+                WindowManager.LayoutParams.MATCH_PARENT,
+                WindowManager.LayoutParams.MATCH_PARENT,
+                WindowManager.LayoutParams.TYPE_SYSTEM_OVERLAY,
+                0, //| WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE,
+                PixelFormat.TRANSLUCENT);
+        m_wm.addView(m_main_view, full_params);
         Log.i("org.joygram.etoolbox", "add main view");
 
     }
@@ -77,11 +138,13 @@ public class MainService extends Service implements OnTouchListener, OnClickList
     @Override
     public void onDestroy() {
         super.onDestroy();
-        if (m_overlay_button != null) {
+        if (m_main_view != null) {
             m_wm.removeView(m_overlay_button);
             m_wm.removeView(m_top_left_view);
+            m_wm.removeView(m_main_view);
             m_overlay_button = null;
             m_top_left_view = null;
+            m_main_view = null;
         }
     }
 
