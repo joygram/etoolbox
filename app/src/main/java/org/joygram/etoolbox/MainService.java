@@ -282,12 +282,11 @@ public class MainService extends Service implements OnTouchListener, OnClickList
     {
         Log.i(m_logger_name, String.format("call refresh"));
 
-
         Intent intent = new Intent(this, FullscreenActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION
                 | Intent.FLAG_ACTIVITY_NEW_TASK);
 
-        for (int i = 0; i < 15; ++i)
+        for (int i = 0; i < 5; ++i)
         {
             startActivity(intent);
         }

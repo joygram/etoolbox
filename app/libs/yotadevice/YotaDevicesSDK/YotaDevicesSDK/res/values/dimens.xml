@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="navigation_panel_height">80.0px</dimen>
+    <dimen name="popup_flip_padding_top">25.329987dip</dimen>
+    <dimen name="popup_flip_padding_side">10.669983dip</dimen>
+</resources>

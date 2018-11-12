@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/widget_root" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/bottom_line" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" android:layout_toStartOf="@id/more_layout" />
+    <RelativeLayout android:id="@id/more_layout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_marginStart="5.0dip" android:layout_alignParentEnd="true">
+        <FrameLayout android:id="@id/more" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:layout_above="@id/dot_line">
+            <TextView android:textSize="14.0dip" android:textColor="#ffffffff" android:id="@id/more_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/text_more" android:fontFamily="PT Sans Yota" />
+            <ImageView android:layout_gravity="center" android:id="@id/more_image" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layerType="software" />
+        </FrameLayout>
+        <ImageView android:id="@id/dot_line" android:layout_width="fill_parent" android:layout_height="2.0px" android:src="@drawable/widget_dot_line" android:layout_alignParentBottom="true" android:layerType="software" android:layout_alignStart="@id/more" android:layout_alignEnd="@id/more" />
+    </RelativeLayout>
+    <ImageView android:id="@id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="11.0dip" android:src="@drawable/template_icon" android:layout_above="@id/bottom_line" android:layout_marginEnd="6.5999756dip" />
+    <TextView android:textSize="14.0dip" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/left_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="@string/text_info" android:singleLine="true" android:layout_above="@id/bottom_line" android:fontFamily="PT Sans Yota" android:layout_toStartOf="@id/right_text" android:layout_toEndOf="@id/icon" />
+    <TextView android:textSize="14.0dip" android:textColor="@android:color/white" android:gravity="end" android:id="@id/right_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="@string/text_info" android:singleLine="true" android:layout_above="@id/bottom_line" android:layout_alignWithParentIfMissing="true" android:fontFamily="PT Sans Yota" android:layout_marginStart="6.5999756dip" android:layout_toStartOf="@id/more_layout" />
+    <FrameLayout android:id="@id/content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/left_text" />
+</RelativeLayout>

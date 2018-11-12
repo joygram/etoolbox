@@ -1,0 +1,25 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: YotaDevicesSDK.apk
+compressionType: false
+doNotCompress:
+- arsc
+- png
+- gif
+isFrameworkApk: true
+packageInfo:
+  forcedPackageId: '2'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '25'
+  targetSdkVersion: '25'
+sharedLibrary: true
+sparseResources: false
+unknownFiles: {}
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.3.4
+versionInfo:
+  versionCode: '25'
+  versionName: 7.1.1

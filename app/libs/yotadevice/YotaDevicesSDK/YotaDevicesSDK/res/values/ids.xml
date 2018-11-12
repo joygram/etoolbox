@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="large">false</item>
+    <item type="id" name="medium">false</item>
+    <item type="id" name="medium_half">false</item>
+    <item type="id" name="small">false</item>
+    <item type="id" name="tiny">false</item>
+    <item type="id" name="extra_large">false</item>
+    <item type="id" name="full_screen">false</item>
+    <item type="id" name="Communication">false</item>
+    <item type="id" name="Social">false</item>
+    <item type="id" name="Productivity">false</item>
+    <item type="id" name="Entertainment">false</item>
+    <item type="id" name="Tools">false</item>
+    <item type="id" name="Children">false</item>
+    <item type="id" name="Lifestyle">false</item>
+    <item type="id" name="HealthAndFitness">false</item>
+    <item type="id" name="Business">false</item>
+    <item type="id" name="BooksAndMagazines">false</item>
+    <item type="id" name="News">false</item>
+    <item type="id" name="Weather">false</item>
+    <item type="id" name="Travel">false</item>
+    <item type="id" name="Education">false</item>
+    <item type="id" name="Personalisation">false</item>
+    <item type="id" name="Games">false</item>
+    <item type="id" name="Cover">false</item>
+    <item type="id" name="Panel">false</item>
+    <item type="id" name="main_layout" />
+    <item type="id" name="notification_layout" />
+    <item type="id" name="button_ok" />
+    <item type="id" name="button_cancel" />
+    <item type="id" name="button_action" />
+    <item type="id" name="flip_popup_image" />
+    <item type="id" name="flip_popup_title" />
+    <item type="id" name="flip_popup_description" />
+    <item type="id" name="widget_root" />
+    <item type="id" name="footer" />
+    <item type="id" name="left_text" />
+    <item type="id" name="right_text" />
+    <item type="id" name="content" />
+    <item type="id" name="bottom_line" />
+    <item type="id" name="more_layout" />
+    <item type="id" name="more" />
+    <item type="id" name="dot_line" />
+    <item type="id" name="more_text" />
+    <item type="id" name="more_image" />
+    <item type="id" name="icon" />
+    <item type="id" name="template_widget_icon" />
+    <item type="id" name="template_widget_title" />
+    <item type="id" name="template_widget_title_date" />
+    <item type="id" name="template_widget_line" />
+    <item type="id" name="template_widget_content" />
+    <item type="id" name="loading_data" />
+    <item type="id" name="template_widget_text" />
+    <item type="id" name="template_widget_button" />
+    <item type="id" name="fake_bottom" />
+    <item type="id" name="background_image" />
+    <item type="id" name="navigation_bar">false</item>
+    <item type="id" name="separator">false</item>
+    <item type="id" name="btn_back">false</item>
+    <item type="id" name="btn_home_app">false</item>
+</resources>

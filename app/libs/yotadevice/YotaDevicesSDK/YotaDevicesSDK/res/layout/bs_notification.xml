@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/main_layout" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/background_image" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:id="@id/notification_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/button_ok" />
+    <ImageView android:id="@id/button_ok" android:layout_width="62.669983dip" android:layout_height="62.669983dip" android:layout_marginTop="36.669983dip" android:layout_marginBottom="71.32999dip" android:src="@drawable/bs_ok_button" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    <ImageView android:id="@id/button_cancel" android:visibility="gone" android:layout_width="62.669983dip" android:layout_height="62.669983dip" android:layout_marginTop="36.669983dip" android:layout_marginBottom="71.32999dip" android:layout_alignParentBottom="true" android:layout_marginStart="20.0dip" />
+    <ImageView android:id="@id/button_action" android:visibility="gone" android:layout_width="62.669983dip" android:layout_height="62.669983dip" android:layout_marginTop="36.669983dip" android:layout_marginBottom="71.32999dip" android:layout_alignParentBottom="true" android:layout_marginEnd="20.0dip" android:layout_alignParentEnd="true" />
+</RelativeLayout>

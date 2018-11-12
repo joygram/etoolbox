@@ -1,0 +1,165 @@
+Manifest-Version: 1.0
+Created-By: 1.8.0_141 (Oracle Corporation)
+
+Name: res/drawable-hdpi-v4/widget_clocks_icon.png
+SHA-256-Digest: 7lvjbAlihzOe1ZBbuXaDwjoOIexltw1bdhEM77lwem0=
+
+Name: res/drawable-hdpi-v4/bs_popup_pattern.png
+SHA-256-Digest: fhiV4aOHaxpJK1+dBz6Y8aKE9AfHrrQbkqXDO46Ursw=
+
+Name: res/layout/modern_widget_footer_temlate_black.xml
+SHA-256-Digest: sWO44Lj7PguMeVa9/77wEr0/1Lzima4I8W6U9UAS/h0=
+
+Name: res/drawable-xhdpi-v4/ic_menu_p2b_active.png
+SHA-256-Digest: Ua0RGJ4xs2YqsEokUO3p/qHhG9bBbaLS2bNGdOjkWpM=
+
+Name: res/drawable/dot_line.xml
+SHA-256-Digest: nB49emWPekP2RF1JWMvN3wS9U2ohkCiz/OCxaQg5e3M=
+
+Name: res/layout/template_widget_icon_footer.xml
+SHA-256-Digest: kyZLoUe4SoI5+JgHYUetonOYnn07dJJQPEslptEqWrs=
+
+Name: res/layout/template_widget_text.xml
+SHA-256-Digest: 3x4DkjmsPV6YQi8dGoS7YTjx/8RQHSn7IiLfb14hvdQ=
+
+Name: res/drawable-hdpi-v4/bs_ok_button_white.xml
+SHA-256-Digest: dnbxKfbJyBIo8dnJjzLM6ydM2zvIxiFAyODTduhrR2I=
+
+Name: res/drawable/action_bar_p2b_btn.xml
+SHA-256-Digest: B+T9qIYtZccS5sesSi+dZJQRUAS0r/Lw98cskMjnrXY=
+
+Name: res/layout/flip_layout.xml
+SHA-256-Digest: bSI7lLCh1lmXI2zHR9PGc0t114WfE2vEZdze2aL0JRM=
+
+Name: res/drawable-hdpi-v4/bs_ok_tap.png
+SHA-256-Digest: f80fsvJxE5Mb6+ifTZPNgdvCEIFVi6MSKdoyG0XpX0I=
+
+Name: res/drawable-hdpi-v4/widget_footer_buttom_black.xml
+SHA-256-Digest: 5c1gpx+1jhpe1n4BgznTCaOtKHd2GzDVKfsN5+Eq1CE=
+
+Name: res/drawable-hdpi-v4/glow_google_icon_hover.png
+SHA-256-Digest: a6HzmYuiOokZcdxtVo1RumKqbhIQcdo0j9QqiH9QGeQ=
+
+Name: res/drawable-hdpi-v4/bs_ok_normal.png
+SHA-256-Digest: ivrlSPTGfVC9KnV/OOYN72n0jWjHQo6hBcU4KbAKV1w=
+
+Name: res/drawable-hdpi-v4/glow_mirror_icon_w.png
+SHA-256-Digest: V4smqcc0EuH9FHLXSYNPrH2H2iFjBc/TWOVfR9YXzyY=
+
+Name: res/drawable-hdpi-v4/glow_google_icon_w.png
+SHA-256-Digest: Rb+elXE3VkMoa2i+GlHSedgYba0dGvG1WeP8fpGDZsA=
+
+Name: res/drawable-hdpi-v4/bs_ok_hover_white.png
+SHA-256-Digest: KXQbXqQsDJ7sqjvTGPmMWLe/bkxHzI7Yudq0mGu2klY=
+
+Name: res/layout/template_widget_tiny.xml
+SHA-256-Digest: BJGNqttFX08Sp2CFElm5mZSjej0PIOejV1gXmtNPZzA=
+
+Name: res/drawable-hdpi-v4/flip_the_phone_bg_white.png
+SHA-256-Digest: dT+U77OOWg/cfJL3eq1EvswZZLqtF2Hm7B6zTauXfqs=
+
+Name: resources.arsc
+SHA-256-Digest: zVrEFYHrIppqL4ROmoVy0vuaTiHkKuP3R98ZtrHlkZc=
+
+Name: res/drawable-hdpi-v4/bs_ok_button.xml
+SHA-256-Digest: ex91/Voz2MsP5HxFzVbW43/n+sUQrqqd/7IL3Dmatyc=
+
+Name: res/drawable-hdpi-v4/ic_navbar_back_button.png
+SHA-256-Digest: aDyl71DKMAIsRUmW9ycXwUlE24ntK36dtFWYTeXKwLg=
+
+Name: res/drawable-hdpi-v4/bs_ok_tap_white.png
+SHA-256-Digest: gQrteWloPyhx3Fd7Nqpob2Ttp5AtRr/j+HfBkfJMAQ4=
+
+Name: AndroidManifest.xml
+SHA-256-Digest: cjjOj2kdC9KRzvLVL8ud4ONf1KhtIYKSVutSunEFgs4=
+
+Name: res/drawable-hdpi-v4/flip_device_animation.gif
+SHA-256-Digest: ZH2GYAojUXmQvhsQLMk6CmU/R2qRU2zw8aqviaLWvXw=
+
+Name: res/layout/template_widget_loading_data.xml
+SHA-256-Digest: 3ZyGPFl/9ds8YCTJmCjdKe/o5BfADtPErGkbtWdO9yI=
+
+Name: res/layout/template_widget_text_and_button.xml
+SHA-256-Digest: XNbUAFXBqtqa4XH0JIHMuhgVjDfCVDHxgvI2O6qG+xc=
+
+Name: res/drawable-hdpi-v4/bs_ok_hover.png
+SHA-256-Digest: KXQbXqQsDJ7sqjvTGPmMWLe/bkxHzI7Yudq0mGu2klY=
+
+Name: res/drawable-hdpi-v4/widget_footer_button.xml
+SHA-256-Digest: fqeYGD2OSpE39ZtKmLivZOhNaDZEHMYxxW1CPpB9gAs=
+
+Name: res/drawable/flip_popup_bg.xml
+SHA-256-Digest: vi4nUEXQe241JmqOmBTR8ou90ZJ3vDGEpLOpOl5qSP8=
+
+Name: res/drawable-xhdpi-v4/ic_menu_p2b.png
+SHA-256-Digest: Brw1iM6gkHc6JHub74llMoStZCwSyahDj54ep2uG+Xg=
+
+Name: res/drawable-hdpi-v4/ic_navbar_showkeyboard.png
+SHA-256-Digest: aINX0/OFbz3JKbM4HuinqteU9/y/8CboWuaMo4Y2nKQ=
+
+Name: res/drawable-hdpi-v4/widget_clocks_icon_black.png
+SHA-256-Digest: F3QBlJ+CPUeUm7PZOEZGLwv7kIKg1PU6sp5telDdcbs=
+
+Name: res/layout/template_widget_icon_header.xml
+SHA-256-Digest: pIaU1BOYfZOhl2U1GqTpmyteSXN/OnBLDE7G7rm7LO0=
+
+Name: res/drawable-hdpi-v4/popup_img_rotatethephone.png
+SHA-256-Digest: qZR1VYS4Z72ac/oL1Yq8apkDAWRRWIybwOvf78QKEYU=
+
+Name: res/drawable/bs_notif_dot_line.xml
+SHA-256-Digest: UcM4mXlmjP9vAYAqPHrl9MkWnFTpxwF1psyTyt+d2iQ=
+
+Name: res/drawable-hdpi-v4/popup_pattern.png
+SHA-256-Digest: fhiV4aOHaxpJK1+dBz6Y8aKE9AfHrrQbkqXDO46Ursw=
+
+Name: res/drawable-hdpi-v4/ic_navbar_home_white_pixel.png
+SHA-256-Digest: nTGqOwsMpafSYIJMCSiw6+/yTjOXPlHbUcwC8WWibdw=
+
+Name: res/drawable-hdpi-v4/list_icon.png
+SHA-256-Digest: xPKNwYHfUrE3B5qWAq9ga2mtL+w/gWX96Wch72saaiQ=
+
+Name: res/drawable-hdpi-v4/bs_flip_content_image.png
+SHA-256-Digest: b2H5g3ZCeUDFh4OhgD8CPQvakeZe0yXUpZthIT5N5PA=
+
+Name: res/drawable-hdpi-v4/flip_the_phone_bg_black.png
+SHA-256-Digest: 20UDGu0FqO1TZ/CfFxgdk9+bXawOdfS4YDO+ZLvU2v8=
+
+Name: res/layout/glowpanel_layout.xml
+SHA-256-Digest: 6bC3DsoTvu7DhREJd/88TsPmjTosBXAEVN7yHYfABrA=
+
+Name: res/drawable-hdpi-v4/glow_screenshot_icon_hover.png
+SHA-256-Digest: jMZ8SONcSDe0tZ69eEj60Lyp0o55MgXsS2huor0OVGg=
+
+Name: res/layout/modern_widget_footer_template.xml
+SHA-256-Digest: QEOwkFc3EOulhoDQYa44YbUHsYTWwwXyqx8bnINA3jI=
+
+Name: res/drawable-hdpi-v4/glow_mirror_icon_hover.png
+SHA-256-Digest: st8Nl200zYEBGT8dotaPjmnMTk9st3LNFYshbaZFoNs=
+
+Name: res/drawable-hdpi-v4/glow_screenshot_icon_w.png
+SHA-256-Digest: lg2rLIkTf56B2PZNFsgWkyXh5mzcq15uakLyH8lG498=
+
+Name: res/drawable/bs_notification_shape.xml
+SHA-256-Digest: rtcTNex/KqPZZ7JAXZilqzdQC9IDB9UPv3HKwgN3MdQ=
+
+Name: res/drawable-hdpi-v4/template_icon.png
+SHA-256-Digest: JL8YOFeIGYv8LWcAfudjPoyHb/PO7rOIFjjwc5Tl1XU=
+
+Name: res/layout/bs_notification.xml
+SHA-256-Digest: 8I1OUpu1eV2ORu+yp1rZkYt4NANPclcOT89jmxPgGI8=
+
+Name: res/drawable-hdpi-v4/bs_ok_normal_white.png
+SHA-256-Digest: wlxpzZMvKyeRqXx5o7+bxb67Bby9XsjcS7irWoDxOPE=
+
+Name: res/layout/navigation_bar.xml
+SHA-256-Digest: iKg7MqwKTNE62gjgHBplcq+2QMGbbEwq3MfTPWUlSKQ=
+
+Name: classes.dex
+SHA-256-Digest: plt5XjhZ/oslK1qlGk2Rfl3qdJoLu5BTPWnMTPcMJpU=
+
+Name: res/drawable/widget_dot_line.xml
+SHA-256-Digest: Of1HEh2WfrmPWoACWEoM88gUx+P72dAs5tUzGkVW7Y4=
+
+Name: res/layout/splash_screen.xml
+SHA-256-Digest: 6+RYmD53EZDK8Q2Lx3t6C6rFvVxCCxiehYcvIJPPyjI=
+

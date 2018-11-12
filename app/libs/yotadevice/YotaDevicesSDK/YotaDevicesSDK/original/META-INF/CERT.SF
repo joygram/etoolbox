@@ -1,0 +1,167 @@
+Signature-Version: 1.0
+X-Android-APK-Signed: 2
+SHA-256-Digest-Manifest: gSWHd7jTA17Z1s4vZI3mG3kYME5hquZxr/Y21f1MYqE=
+Created-By: 1.0 (Android SignApk)
+
+Name: res/drawable-hdpi-v4/widget_clocks_icon.png
+SHA-256-Digest: rOjvZJ3zMG4Gs5IJH62SkNaHisuN32wVSGkh3Ie56w8=
+
+Name: res/drawable-hdpi-v4/bs_popup_pattern.png
+SHA-256-Digest: lxoLL2pUNZyiK8toPvUjOYd81Y48RrmWAHCXUUriV0w=
+
+Name: res/layout/modern_widget_footer_temlate_black.xml
+SHA-256-Digest: y61NLpudnmqRseeHLkmztZn119xvR3Sswe+ScZy2NiA=
+
+Name: res/drawable-xhdpi-v4/ic_menu_p2b_active.png
+SHA-256-Digest: 8g5YL3XM9F3eDAw2W8DGa21lxou8q2UW1oD7NAb1J0U=
+
+Name: res/drawable/dot_line.xml
+SHA-256-Digest: mRgeMoZS4P37AAeOwLPAvSR/COTtkvBrZZ0blMuENFI=
+
+Name: res/layout/template_widget_icon_footer.xml
+SHA-256-Digest: l4sOvQEFy4tVKWTOcHtXpdim6szhiGfN2mXQgoeEYDs=
+
+Name: res/layout/template_widget_text.xml
+SHA-256-Digest: ZMQ5iKwiYLmZUdOV9LJ8GzRbIIza3aIjOEJW1ISTrAI=
+
+Name: res/drawable-hdpi-v4/bs_ok_button_white.xml
+SHA-256-Digest: rLvnE0kkuZN4qCrrDqld0lLLD34xVucaOI09lGBw5Nk=
+
+Name: res/drawable/action_bar_p2b_btn.xml
+SHA-256-Digest: fR3lgJWvNqRJnct0DqO0Lo7Nt8tdbyhB+peKHpTlZ2g=
+
+Name: res/layout/flip_layout.xml
+SHA-256-Digest: GF9FQzv0sd8dpaxuGfcixX7WeTDKObdkT4XefV09Yfs=
+
+Name: res/drawable-hdpi-v4/bs_ok_tap.png
+SHA-256-Digest: oWFBry4Id3qACpJgMxisb56egM93VH9dUh4rYeHoZ28=
+
+Name: res/drawable-hdpi-v4/widget_footer_buttom_black.xml
+SHA-256-Digest: 0r8pehNw1SiPS8Xlw5LoEAUe9VccSrF7Ri/b0Tkm4Uc=
+
+Name: res/drawable-hdpi-v4/glow_google_icon_hover.png
+SHA-256-Digest: h1cb0GH9/3wABGePJuHfIMrxhaqID4IfXit/h9z2llg=
+
+Name: res/drawable-hdpi-v4/bs_ok_normal.png
+SHA-256-Digest: n74shutzX+cSo+FVgdph1N7hCdP2EAykjWo8vyPi4ds=
+
+Name: res/drawable-hdpi-v4/glow_mirror_icon_w.png
+SHA-256-Digest: MWvyw4RxJA2q73u3yjpEPRZUNC3YG/6lKZiitZtLmj8=
+
+Name: res/drawable-hdpi-v4/glow_google_icon_w.png
+SHA-256-Digest: PY/LUl7UPSSMaCNPa55bndhgShitQ/vmpBh1GThY/sM=
+
+Name: res/drawable-hdpi-v4/bs_ok_hover_white.png
+SHA-256-Digest: KdJFEGDfwUSSHEQHXiSoSsDMBP/J4pFsT7uat9u0yDw=
+
+Name: res/layout/template_widget_tiny.xml
+SHA-256-Digest: 9aq326Rj/n1jGoaaA2BN/xNmAQZOQJp3RrhdseSRLXg=
+
+Name: res/drawable-hdpi-v4/flip_the_phone_bg_white.png
+SHA-256-Digest: dQXTKJEa0zUGvkkUVK3lQAaBwgRui2vQSgoAdGnp+N8=
+
+Name: resources.arsc
+SHA-256-Digest: WzXX5oemYLxLFMwH4sc9/iOTuhY2ubVjOiAlyePmo6Y=
+
+Name: res/drawable-hdpi-v4/bs_ok_button.xml
+SHA-256-Digest: vxUBm5501/OdIHyhgUDKLG5VFWcAg6NH+AkHvjRWJPQ=
+
+Name: res/drawable-hdpi-v4/ic_navbar_back_button.png
+SHA-256-Digest: PuVVep4MSrOZn/1RhJ6oi5XQ8LNXgJ42+ZPfq7ZjOZ0=
+
+Name: res/drawable-hdpi-v4/bs_ok_tap_white.png
+SHA-256-Digest: WUTAc7Qv6YatMZ9jULPzanl7z8IrXtOzlDX8pryZt7c=
+
+Name: AndroidManifest.xml
+SHA-256-Digest: vHNkrVxOkHGcL1IQNx7ugxSF906UKHB/t/iXg1lyNUU=
+
+Name: res/drawable-hdpi-v4/flip_device_animation.gif
+SHA-256-Digest: fpHFG0lAbqf759bkgG3A9ENU4kv1n9ejTSp6S9kgyB8=
+
+Name: res/layout/template_widget_loading_data.xml
+SHA-256-Digest: rXFOKES17xthcnGVBuBCeHg9TB+Y8TMWzfG35TG0Y1k=
+
+Name: res/layout/template_widget_text_and_button.xml
+SHA-256-Digest: nryovo/Fy1rucBRePHJxi0vxEkUPEVi2dJnDrnaPPBE=
+
+Name: res/drawable-hdpi-v4/bs_ok_hover.png
+SHA-256-Digest: Ia85pNYmNldHuGRMgHJoAV6GZIggubAwoMCqO040pkE=
+
+Name: res/drawable-hdpi-v4/widget_footer_button.xml
+SHA-256-Digest: OaeoLPLFwRqNuJySFNwT3cndxvcaHfi1yHGeS3TZoOs=
+
+Name: res/drawable/flip_popup_bg.xml
+SHA-256-Digest: Q8URZ9GnXdKmVjjH3c3yTuTt++XgCX8g6o7YabAGcII=
+
+Name: res/drawable-xhdpi-v4/ic_menu_p2b.png
+SHA-256-Digest: AnE1UGFvSZWuoXUyREtS30Z/Sul+ztYlzUInnN5be2s=
+
+Name: res/drawable-hdpi-v4/ic_navbar_showkeyboard.png
+SHA-256-Digest: cNDcr7IncFX/mgaID/fxD019mRktYnM9Nt6wQYDk4ko=
+
+Name: res/drawable-hdpi-v4/widget_clocks_icon_black.png
+SHA-256-Digest: y6lvc1n8njZq32ojpylZO5EmwUghDOyv8iaRCV2Ch84=
+
+Name: res/layout/template_widget_icon_header.xml
+SHA-256-Digest: 5zAAfChxs8M/AZh40wHoXbwww26xfZ6TQM6JWx3MoDs=
+
+Name: res/drawable-hdpi-v4/popup_img_rotatethephone.png
+SHA-256-Digest: OqzjhX2tL6KLj6YQ0fmzatBsOF/4dEEBRMWigT6QrPc=
+
+Name: res/drawable/bs_notif_dot_line.xml
+SHA-256-Digest: sQcgcAo+7474kLCwlE3ckOozaTRFPPrBqE+Y1dtqMgU=
+
+Name: res/drawable-hdpi-v4/popup_pattern.png
+SHA-256-Digest: KfEAeppH8llG3OwOlKu7GGb17WCt1Dbh+ksmkISILBU=
+
+Name: res/drawable-hdpi-v4/ic_navbar_home_white_pixel.png
+SHA-256-Digest: 5je0kTFFXP5GVwfTgqh/EJ4ZoOwzLsMg/HkrHUGvCZc=
+
+Name: res/drawable-hdpi-v4/list_icon.png
+SHA-256-Digest: B3zeu+FEoeAN2qqaFpgnqQiCNT8qyu7bLYxWuqrM45w=
+
+Name: res/drawable-hdpi-v4/bs_flip_content_image.png
+SHA-256-Digest: CRouZKN+59UyDYMbqWrGvpyEK1OFdCXiOMaPw8O683k=
+
+Name: res/drawable-hdpi-v4/flip_the_phone_bg_black.png
+SHA-256-Digest: OsJSpzfkP4tUlLpbdlEIvEJV6vpFCTlMLmEE8/eOeys=
+
+Name: res/layout/glowpanel_layout.xml
+SHA-256-Digest: X31tRT/DPajNCymule9Dg5deJmArXHMrAYBxQ9nppkY=
+
+Name: res/drawable-hdpi-v4/glow_screenshot_icon_hover.png
+SHA-256-Digest: lpjFIriUQrbaL7VafuCRB3iFTgrfUdo6zhGJAN/hNZ4=
+
+Name: res/layout/modern_widget_footer_template.xml
+SHA-256-Digest: PAvnTi80SGXU9a6kM8WPovyfdb0DzDnFdyMuZqYh8ng=
+
+Name: res/drawable-hdpi-v4/glow_mirror_icon_hover.png
+SHA-256-Digest: HqYysnCGv53F/Ug2Vwz5sLwtQXR/1sPn6uX32oTphhk=
+
+Name: res/drawable-hdpi-v4/glow_screenshot_icon_w.png
+SHA-256-Digest: 8oK1psXyoC+KoKlS8XOBTjwknKNibXcTHcRtLGeLSsw=
+
+Name: res/drawable/bs_notification_shape.xml
+SHA-256-Digest: vXSM2SjPfs/Q5yqSgdhl18l5r4THeqaZNh/3NxtjLcw=
+
+Name: res/drawable-hdpi-v4/template_icon.png
+SHA-256-Digest: FHTAq+Wrv2QVoMHPNlq4bINg51Z1OpA+0gp6z5mRMQI=
+
+Name: res/layout/bs_notification.xml
+SHA-256-Digest: fPtM2zRhpBTM6fGh5sYVKJZHUhvveSX/cxDfJPkQyAM=
+
+Name: res/drawable-hdpi-v4/bs_ok_normal_white.png
+SHA-256-Digest: VlPIJWkV+9Mnhm1MZkcrVaqgm0Nu8Sx9sCmxmMEViVU=
+
+Name: res/layout/navigation_bar.xml
+SHA-256-Digest: A91rxBQwU6zjVBTBWXlCNZcS7tsVCsDB8ELZY5Uk7z8=
+
+Name: classes.dex
+SHA-256-Digest: PUD4Zwbpgt6KYFBPcdtyZUXEOU0SqSCsTNJIEPF6vE4=
+
+Name: res/drawable/widget_dot_line.xml
+SHA-256-Digest: TzmEo9iq1GZD31XlXeLg3WuJjn53AwRVH2gZlH6lefQ=
+
+Name: res/layout/splash_screen.xml
+SHA-256-Digest: S/7Gmru8Asz7mNn05R249shg5x1MHyu0cnpWJeEUQqg=
+

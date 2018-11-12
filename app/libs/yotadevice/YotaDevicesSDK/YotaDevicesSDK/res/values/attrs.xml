@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="animationGif" format="reference" />
+    <style name="size">
+        <item name="@id/large">0x00000001</item>
+        <item name="@id/medium">0x00000002</item>
+        <item name="@id/medium_half">0x00000004</item>
+        <item name="@id/small">0x00000008</item>
+        <item name="@id/tiny">0x00000010</item>
+        <item name="@id/extra_large">0x00000020</item>
+        <item name="@id/full_screen">0x00000040</item>
+    </style>
+    <style name="category">
+        <item name="@id/Communication">0x00000001</item>
+        <item name="@id/Social">0x00000002</item>
+        <item name="@id/Productivity">0x00000004</item>
+        <item name="@id/Entertainment">0x00000008</item>
+        <item name="@id/Tools">0x00000010</item>
+        <item name="@id/Children">0x00000020</item>
+        <item name="@id/Lifestyle">0x00000040</item>
+        <item name="@id/HealthAndFitness">0x00000080</item>
+        <item name="@id/Business">0x00000100</item>
+        <item name="@id/BooksAndMagazines">0x00000200</item>
+        <item name="@id/News">0x00000400</item>
+        <item name="@id/Weather">0x00000800</item>
+        <item name="@id/Travel">0x00001000</item>
+        <item name="@id/Education">0x00002000</item>
+        <item name="@id/Personalisation">0x00004000</item>
+        <item name="@id/Games">0x00008000</item>
+        <item name="@id/Cover">0x00010000</item>
+        <item name="@id/Panel">0x00020000</item>
+    </style>
+    <attr name="icon_frontscreen" format="reference" />
+    <attr name="invertable" format="boolean" />
+</resources>
