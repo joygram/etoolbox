@@ -1,10 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <SwitchPreference
-        android:defaultValue="true"
-        android:key="button_show_switch"
-        android:summary="@string/pref_button_show_summary"
-        android:title="@string/pref_button_show" />
 
     <!-- NOTE: EditTextPreference accepts EditText attributes. -->
     <!-- NOTE: EditTextPreference's summary should be set to its value by the activity code. -->
@@ -12,17 +7,57 @@
     <!-- NOTE: Hide buttons to simplify the UI. Users can touch outside the dialog to
          dismiss it. -->
     <!-- NOTE: ListPreference's summary should be set to its value by the activity code. -->
-    <ListPreference
-        android:defaultValue="1"
-        android:entries="@array/list_preference_entries"
-        android:entryValues="@array/list_preference_entries"
-        android:key="pref_update_mode"
-        android:title="업데이트 모드" />
+  <PreferenceCategory android:title="Touch Refresh">
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="switch_touch"
+        android:switchTextOff="OFF"
+        android:switchTextOn="ON"
+        android:title="Use Refresh Touch" />
+
     <EditTextPreference
-        android:defaultValue="0.5"
-        android:key="pref_button_alpha"
+        android:defaultValue="1"
+        android:dependency="switch_touch"
+        android:key="text_refresh_touch_count"
         android:selectAllOnFocus="true"
         android:singleLine="true"
-        android:title="투명도" />
+        android:maxLines="1"
+        android:title="Refresh Touch Count" />
+  </PreferenceCategory>
+
+<PreferenceCategory android:title="Touch Refresh">
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="switch_timer"
+        android:switchTextOff="OFF"
+        android:switchTextOn="ON"
+        android:title="Use Refresh Timer" />
+    <EditTextPreference
+        android:defaultValue="30"
+        android:key="text_timeout"
+        android:dependency="switch_timer"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:summary="auto refresh with Refresh Timeout"
+        android:title="Refresh Time (Seconds)" />
+</PreferenceCategory>
+
+<PreferenceCategory android:title="Misc">
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="switch_show_refresh_button"
+        android:title="Show Refresh Button"
+        android:switchTextOff="OFF"
+        android:switchTextOn="ON"
+        />
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="switch_auto_start"
+        android:title="Auto Start Service"
+        android:switchTextOff="OFF"
+        android:switchTextOn="ON"
+        />
+</PreferenceCategory>
 
 </PreferenceScreen>
