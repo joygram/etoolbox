@@ -19,37 +19,48 @@ public class MirrorActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mirror);
-
+        yotaMirror();
     }
 
-    public void yotaMirror()
-    {
-        if (true == MainPreferenceManager.m_is_mirroring)
-        {
+    public void switchScreen() {
+        Intent switch_intent = getPackageManager().getLaunchIntentForPackage("com.android.screenswitch");
+        if (switch_intent != null) {
+            startActivity(switch_intent);
+        }
+    }
+
+    public void launchHome() {
+        // run main launcher
+        Intent main_intent = new Intent(Intent.ACTION_MAIN);
+        main_intent.addCategory(Intent.CATEGORY_HOME);
+        main_intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(main_intent);
+    }
+
+    public void yotaMirror() {
+        if (true == MainPreferenceManager.m_is_mirroring) {
             MainPreferenceManager.m_is_mirroring = false;
+            //switchScreen();
+            Log.i("org.joygram.etoolbox", "STOP MIRRORING");
             EpdManager.getInstance().stopMirroring();
-            Log.i("org.joygram.etoolbox", "stop mirroring";
-            return;
+        } else {
+            Epd.setUpdateMode(getWindow().getDecorView().getRootView(), Epd.UPDATE_MODE_ADAPTIVE);
+            String device_name = "START MIRRORING device_name:" + Build.MODEL;
+            Log.i("org.joygram.etoolbox", device_name);
+            MainPreferenceManager.m_is_mirroring = true;
+            EpdManager.getInstance().startMirroring();
         }
 
-        String device_name = " device_name:" + Build.MODEL + " start mirroring";
-        Log.i("org.joygram.etoolbox", device_name);
-
-        MainPreferenceManager.m_is_mirroring = true;
-        EpdManager.getInstance().startMirroring();
-        EpdManager.getInstance().lockEpd();
+        launchHome();
     }
 
     @Override
-    public void onStart()
-    {
-        yotaMirror();
+    public void onStart() {
         super.onStart();
     }
 
     @Override
-    public void onResume()
-    {
+    public void onResume() {
         super.onResume();
     }
 }
