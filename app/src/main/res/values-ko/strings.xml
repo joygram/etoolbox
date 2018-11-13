@@ -1,13 +1,13 @@
 <resources>
-    <string name="app_name">EPD_TOOLS</string>
-    <string name="title_activity_settings">EPD_TOOLS Settings</string>
+    <string name="app_name">EPD툴즈</string>
+    <string name="title_activity_settings">EPD 설정</string>
 
     <!-- Strings related to Settings -->
 
     <!-- Example General settings -->
-    <string name="pref_header_general">General</string>
-    <string name="pref_button_show">Show Refresh Button</string>
-    <string name="pref_button_show_summary">Show Refresh Button</string>
+    <string name="pref_header_general">일반</string>
+    <string name="pref_button_show">단추 보이기</string>
+    <string name="pref_button_show_summary">리프레시 단추를 보여줍니다.</string>
     <string name="pref_title_social_recommendations">Enable social recommendations</string>
     <string name="pref_description_social_recommendations">Recommendations for people to contact
         based on your message history
@@ -79,8 +79,10 @@
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
 
-    <string name="title_activity_refresh">Joyfresh</string>
-    <string name="title_activity_main_settings">Joyrefresh Settings</string>
-    <string name="title_activity_mirror">Yota Mirror</string>
+    <string name="title_activity_refresh">죠이프레시</string>
+    <string name="title_activity_main_settings">죠이프레시 설정</string>
+    <string name="title_activity_mirror">요타미러</string>
+
+
 
 </resources>

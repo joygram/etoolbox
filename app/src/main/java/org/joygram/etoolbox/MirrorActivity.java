@@ -1,11 +1,15 @@
 package org.joygram.etoolbox;
 
 import android.content.Intent;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Display;
 
+import com.yotadevices.sdk.EpdIntentCompat;
 import com.yotadevices.sdk.EpdManager;
+import com.yotadevices.sdk.utils.RotationAlgorithm;
 
 
 public class MirrorActivity extends AppCompatActivity {
@@ -31,11 +35,28 @@ public class MirrorActivity extends AppCompatActivity {
 
     }
 
+    public void yotaMirror()
+    {
+        String device_name = "device_name:" + Build.MODEL;
+        Log.i("org.joygram.etoolbox", device_name);
+
+        //RotationAlgorithm.OPTION_EXPECT_FIRST_ROTATION_FOR_60SEC;
+        Display display = getWindowManager().getDefaultDisplay();
+        boolean is_epd = com.yotadevices.sdk.Epd.isEpdDisplay(display);
+//        if (false == is_epd)
+        {
+            EpdManager.getInstance().stopMirroring();
+
+            EpdManager.getInstance().startMirroring();
+        }
+        Log.i("org.joygram.etoolbox", String.format("is_epd{0}", is_epd));
+    }
+
     @Override
     public void onStart()
     {
-        EpdManager.getInstance().startMirroring();
-
+        //yota mirror
+        yotaMirror();
         super.onStart();
     }
 

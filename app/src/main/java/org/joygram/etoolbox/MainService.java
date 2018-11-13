@@ -14,10 +14,13 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.TextView;
 
 import android.util.Log;
+
+import com.yotadevices.sdk.EpdManager;
 
 import java.util.List;
 
@@ -98,7 +101,7 @@ public class MainService extends Service implements OnTouchListener, OnClickList
 
         // create button
         m_overlay_button = new Button(this);
-        m_overlay_button.setText("");
+        m_overlay_button.setText("+");
         m_overlay_button.setOnTouchListener(this);
 
         //m_overlay_button.setAlpha(0.3f);
@@ -280,14 +283,21 @@ public class MainService extends Service implements OnTouchListener, OnClickList
 
     public void callRefresh()
     {
+        InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+        if (imm.isAcceptingText())
+        {
+            Log.i(m_logger_name, String.format("on input just skip refresh"));
+            return;
+        }
+
         Log.i(m_logger_name, String.format("call refresh"));
 
-        Intent intent = new Intent(this, FullscreenActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION
-                | Intent.FLAG_ACTIVITY_NEW_TASK);
-
-        for (int i = 0; i < 5; ++i)
+        for (int i = 0; i < 4; ++i)
         {
+            Intent intent = new Intent(this, FullscreenActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION
+                    | Intent.FLAG_ACTIVITY_NEW_TASK);
+
             startActivity(intent);
         }
         m_touch_count = 0;

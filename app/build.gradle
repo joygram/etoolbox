@@ -9,43 +9,33 @@ android {
             storePassword '----'
         }
     }
-    compileSdkVersion 28
+
+    compileSdkVersion 26
     defaultConfig {
         applicationId "org.joygram.etoolbox"
         minSdkVersion 15
         targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        vectorDrawables.useSupportLibrary = true
+        versionCode 2
+        versionName "1.2"
+        multiDexEnabled true
+
     }
     buildTypes {
         release {
-            debuggable false
-            zipAlignEnabled true
-            minifyEnabled true
-            shrinkResources true
-//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+           proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
 //            signingConfig signingConfigs.config
         }
         debug {
-            debuggable true
-            zipAlignEnabled true
-            minifyEnabled true
-            shrinkResources true
-//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+           proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
 //           signingConfig signingConfigs.config
         }
     }
 }
 
 dependencies {
+    compileOnly files('libs/yotadevice/sdk-3.7.12.jar')
+
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'androidx.core:core:1.0.0'
-    implementation 'com.onyx.android.sdk:onyxsdk-base:1.3.9'
-
-    compileOnly files('libs/yotadevice/sdk-3.7.12.jar');
-
-
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     implementation 'com.onyx.android.sdk:onyxsdk-base:1.3.9'
 }
