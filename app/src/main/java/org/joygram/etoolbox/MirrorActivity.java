@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Display;
 
+import com.yotadevices.sdk.Epd;
 import com.yotadevices.sdk.EpdIntentCompat;
 import com.yotadevices.sdk.EpdManager;
 import com.yotadevices.sdk.utils.RotationAlgorithm;
@@ -19,43 +20,29 @@ public class MirrorActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mirror);
 
-
-//        com.yotadevices.sdk.Epd epd = new com.yotadevices.sdk.utils.RotationAlgorithm();
-//        com.yotadevices.sdk.EpdIntentCompat.setEpdFlags()
-
-//        Display display =
-//        com.yotadevices.sdk.Epd.isEpdDisplay();
-//
-//        Intent main_intent = new Intent(Intent.ACTION_MAIN);
-//        main_intent.addCategory(Intent.CATEGORY_HOME);
-//        main_intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-
-//        EpdIntentCompat.setEpdFlags(main_intent, EpdIntentCompat.FLAG_ACTIVITY_KEEP_ON_EPD_SCREEN);
-//        startActivity(main_intent);
-
     }
 
     public void yotaMirror()
     {
-        String device_name = "device_name:" + Build.MODEL;
+        if (true == MainPreferenceManager.m_is_mirroring)
+        {
+            MainPreferenceManager.m_is_mirroring = false;
+            EpdManager.getInstance().stopMirroring();
+            Log.i("org.joygram.etoolbox", "stop mirroring";
+            return;
+        }
+
+        String device_name = " device_name:" + Build.MODEL + " start mirroring";
         Log.i("org.joygram.etoolbox", device_name);
 
-        //RotationAlgorithm.OPTION_EXPECT_FIRST_ROTATION_FOR_60SEC;
-        Display display = getWindowManager().getDefaultDisplay();
-        boolean is_epd = com.yotadevices.sdk.Epd.isEpdDisplay(display);
-//        if (false == is_epd)
-        {
-            EpdManager.getInstance().stopMirroring();
-
-            EpdManager.getInstance().startMirroring();
-        }
-        Log.i("org.joygram.etoolbox", String.format("is_epd{0}", is_epd));
+        MainPreferenceManager.m_is_mirroring = true;
+        EpdManager.getInstance().startMirroring();
+        EpdManager.getInstance().lockEpd();
     }
 
     @Override
     public void onStart()
     {
-        //yota mirror
         yotaMirror();
         super.onStart();
     }

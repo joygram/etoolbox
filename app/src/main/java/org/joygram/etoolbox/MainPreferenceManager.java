@@ -16,6 +16,8 @@ public class MainPreferenceManager {
     static public boolean m_show_refresh_button = true;
     static public boolean m_auto_start = true;
 
+    static public boolean m_is_mirroring = false;
+
     static void getPreferencesData() {
         if (null == m_prefs) {
             return;
