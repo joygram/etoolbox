@@ -51,7 +51,7 @@
         <activity
             android:name=".FullscreenActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_fullscreen"
+            android:label="@string/title_activity_refresh"
             android:theme="@style/FullscreenTheme"></activity>
 
         <activity
