@@ -79,9 +79,9 @@
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
 
-    <string name="title_activity_refresh">죠이프레시</string>
-    <string name="title_activity_main_settings">설정 EPD_TOOLS</string>
-    <string name="title_activity_mirror">요타미러</string>
+    <string name="title_activity_refresh">EPD 리프레시</string>
+    <string name="title_activity_main_settings">EPD 설정</string>
+    <string name="title_activity_mirror">EPD 미러</string>
 
 
 

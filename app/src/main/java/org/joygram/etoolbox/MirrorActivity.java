@@ -47,34 +47,37 @@ public class MirrorActivity
 	public void onMirroringStarted()
 	{
 		Log.w("org.joygram.etoolbox", "onMirrorStarted");
+		MainPreferenceManager.m_is_epd_mirroring = true;
 	};
 	@Override
 	public void onMirroringStopped()
 	{
 		Log.w("org.joygram.etoolbox", "onMirrorStopped");
-
+		MainPreferenceManager.m_is_epd_mirroring = false;
 	};
 
 
 	public void yotaMirror()
 	{
+		//com.yotadevices.sdk.Epd
 		String device_name = "device_name:" + Build.MODEL;
 		Log.i("org.joygram.etoolbox", device_name);
 
 		//RotationAlgorithm.OPTION_EXPECT_FIRST_ROTATION_FOR_60SEC;
-		Display display = getWindowManager().getDefaultDisplay();
-		boolean is_epd = com.yotadevices.sdk.Epd.isEpdDisplay(display);
-//        if (false == is_epd)
-		{
-			//EpdManager.getInstance().stopMirroring();
+//		Display display = getWindowManager().getDefaultDisplay();
+//		boolean is_epd = com.yotadevices.sdk.Epd.isEpdDisplay(display);
 
+        if (false == MainPreferenceManager.m_is_epd_mirroring)
+		{
+			EpdManager.getInstance().stopMirroring();
 			EpdManager.getInstance().startMirroring();
 		}
+
 		//com.yotadevices.sdk.EpdCallbacks;
 		EpdUpdateParams params = new EpdUpdateParams();
 		int black_stretch = params.getBlackStretch();
 
-		Log.i("org.joygram.etoolbox", String.format("is_epd:[{0}], blackStretch:[{1}]", is_epd, black_stretch));
+		Log.i("org.joygram.etoolbox", String.format("blackStretch:[{0}]", black_stretch));
 
 	}
 

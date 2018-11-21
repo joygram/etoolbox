@@ -17,6 +17,7 @@ public class MainPreferenceManager
 	static public boolean m_show_refresh_button = true;
 	static public boolean m_auto_start = true;
 
+	static public boolean m_is_epd_mirroring = false;
 
 	static void getPreferencesData()
 	{
