@@ -2,9 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.joygram.etoolbox">
 
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
+    
     <application
 
         android:allowBackup="true"
@@ -18,7 +19,7 @@
 
         <activity android:name=".MainActivity"
             android:launchMode="singleInstance"
-            android:label="@string/title_activity_fullscreen"
+            android:label="@string/title_activity_refresh"
             android:icon="@mipmap/ic_refresh" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -51,7 +52,7 @@
         <activity
             android:name=".FullscreenActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_fullscreen"
+            android:label="@string/title_activity_refresh"
             android:theme="@style/FullscreenTheme"></activity>
 
         <activity
