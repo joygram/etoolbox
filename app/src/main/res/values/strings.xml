@@ -79,8 +79,10 @@
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
 
-    <string name="title_activity_refresh">EPD refresh</string>
-    <string name="title_activity_main_settings">EPD Settings</string>
-    <string name="title_activity_mirror">EPD Mirror</string>
+    <string name="title_activity_refresh">1[EPD refresh]</string>
+    <string name="title_activity_main_settings">1[EPD Settings]</string>
+    <string name="title_activity_mirror">1[EPD Mirror]</string>
+    <string name="title_activity_mobest">1[EPD Yota Mobest]</string>
+
 
 </resources>

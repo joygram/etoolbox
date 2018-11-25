@@ -7,22 +7,24 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
-
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <uses-library
+            android:name="com.yotadevices.sdk"
+            android:required="true" />
 
-        <uses-library android:name="com.yotadevices.sdk" android:required="true"/>
-
-        <activity android:name=".MainActivity"
-            android:launchMode="singleInstance"
+        <activity
+            android:name=".MainActivity"
+            android:icon="@mipmap/ic_refresh"
             android:label="@string/title_activity_refresh"
-            android:icon="@mipmap/ic_refresh" >
+            android:launchMode="singleInstance">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -53,20 +55,20 @@
             android:name=".FullscreenActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_refresh"
-            android:theme="@style/FullscreenTheme"></activity>
-
+            android:theme="@style/FullscreenTheme" />
         <activity
-            android:icon="@mipmap/ic_settings"
             android:name=".MainSettingsActivity"
+            android:icon="@mipmap/ic_settings"
             android:label="@string/title_activity_main_settings"
             android:theme="@style/SettingTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".MirrorActivity"
+        <activity
+            android:name=".MirrorActivity"
             android:icon="@mipmap/ic_mirror"
             android:label="@string/title_activity_mirror">
             <intent-filter>
@@ -74,6 +76,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!--activity android:name=".MobestActivity"
+            android:icon="@mipmap/ic_home"
+            android:label="@string/title_activity_mobest"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-->
     </application>
 
 </manifest>

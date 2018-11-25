@@ -19,6 +19,7 @@ public class MirrorActivity
 		implements com.yotadevices.sdk.EpdCallbacks
 {
 
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
@@ -36,6 +37,13 @@ public class MirrorActivity
 
 //        EpdIntentCompat.setEpdFlags(main_intent, EpdIntentCompat.FLAG_ACTIVITY_KEEP_ON_EPD_SCREEN);
 //        startActivity(main_intent);
+
+
+		Intent setIntent = new Intent(Intent.ACTION_MAIN);
+		setIntent.addCategory(Intent.CATEGORY_HOME);
+		setIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+		startActivity(setIntent);
+		//finish();
 
 	}
 
@@ -87,6 +95,7 @@ public class MirrorActivity
 		//yota mirror
 		yotaMirror();
 		super.onStart();
+		finish();
 	}
 
 	@Override
